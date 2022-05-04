@@ -77,11 +77,21 @@
     padding: 20px 0;
 }
 
+.modale{
+    display: none;
+    width: 80%;
+    height: 70px;
+    background-color: #000;
+}
+.modale-contenu p {
+    padding-top: 20px;
+}
 h1{
     font-family: 'far_from_homecomingregular';
     font-size: 35px;
     margin-bottom: 30px;
 }
+
 
 #spiderman form{
     display: flex;
@@ -126,7 +136,7 @@ input[type=submit]{
     border-color: white;
 }
 ::placeholder{
-    color: white;
+    color: black;
 }
 
 .newsletter-formulaire input[type=submit]{

@@ -74,29 +74,41 @@ let options = {
 let observer = new IntersectionObserver(handelIntersect, options);
 observer.observe(document.querySelector('.fade'));
 
+// scrool
+
 // // validation de formulaire
 
-// document.getElementById("go").addEventListener('submit' , function (py){
+document.getElementById("go").addEventListener("submit" , function (py) {
+    py.preventDefault();
+    let erreur;
+    let name = document.getElementById("name");
+    let firstname = document.getElementById("firstname");
+    let taille = document.getElementById("taille");
+    let poids = document.getElementById("Poids");
+    let email = document.getElementById("email");
+
+    if (!email.value) {
+        erreur = "veuiller renseigner votre email";
+    }
+    if (!poids.value) {
+        erreur = "veuiller renseigner votre poids";
+    }
+    if (!taille.value) {
+        erreur = "veuiller renseigner votre taille";
+    }
+    if (!firstname.value) {
+        erreur = "veuiller renseigner votre prenom";
+    }
+    if (!name.value) {
+        erreur = "veuiller renseigner votre nom";
+    }
+   
+    if (erreur) {
+        py.preventDefault();
+        document.getElementById("erreur").innerHTML = erreur;
+        return false;
+    } else {
+        document.querySelector(".modale").style.display= 'block'; 
+    }
     
-//     let erreur;
-
-//     let nom = document.getElementById("nom");
-//     if (!nom.value) {
-//         erreur="yeeeeh";
-//     }
-
-    // var inputs = document.getElementsByTagName('input');
-
-    // for ( let i = 0; i < inputs.length; i++) {
-    //     if (!inputs[i].value) {
-    //         erreur = "veuillez renseigner tous les champs";
-    //     }
-    // }
-
-//     if (erreur) {
-//         py.preventDefault();
-//         document.getElementById('erreur').inner = erreur;
-//     } else {
-//         alert('formulaire envoyé !');
-//     }
-// 
+} )
