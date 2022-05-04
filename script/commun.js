@@ -73,6 +73,21 @@ let options = {
  }
 let observer = new IntersectionObserver(handelIntersect, options);
 observer.observe(document.querySelector('.fade'));
+observer.observe(document.querySelector('.titre'));
+observer.observe(document.querySelector('.titre2'));
+observer.observe(document.querySelector('.title'));
+
+// zoom
+let spiderman = document.getElementsByClassName('spider');
+for (let i = 0; i<spiderman.length; i++) {
+    let image = spiderman[i];
+    image.addEventListener('mouseover', function () {
+        image.style.transform ='scale(1.1)'
+    });
+    image.addEventListener('mouseout', function () {
+        image.style.transform ='scale(1)'
+    });
+}
 
 // scrool
 

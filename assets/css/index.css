@@ -14,6 +14,18 @@
     background-size:auto;
 }
 .titre{
+    opacity: 0;
+    transform: translateX(-30px);
+    margin-bottom: 50px;
+}
+.titre2{
+    opacity: 0;
+    transform: translateX(-30px);
+    margin-bottom: 50px;
+}
+.title{
+    opacity: 0;
+    transform: translateX(-30px);
     margin-bottom: 50px;
 }
 
@@ -29,11 +41,17 @@
     transform: translateX(-30px);
 }
 
-#lesspiderman .visible {
+.visible {
   opacity: 1;
   transform: translateX(0);
   transition: 1s cubic-bezier(.5,0,0,1);  
 }
+
+  #lesspiderman .visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(.5,0,0,1);  
+  }
 
 .cta{
     margin-top: 70px;
